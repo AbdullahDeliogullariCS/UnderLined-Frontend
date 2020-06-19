@@ -1,0 +1,45 @@
+.paper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.text{
+    font-style: italic;
+    font-size: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+.email{
+    font-size: 15px;
+    align-items: center;
+    align-content: center;
+}
+
+.iconContainer{
+    direction: inherit;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}

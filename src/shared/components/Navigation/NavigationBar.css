@@ -1,0 +1,17 @@
+.paperim{
+    margin-top: 65px;
+}
+
+.icon{
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.profileAvatar{
+    margin-left: auto;
+}

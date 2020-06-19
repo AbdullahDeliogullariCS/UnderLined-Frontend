@@ -1,21 +1,54 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import ReactHtmlParser from 'react-html-parser';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import axios from "axios";
 
+import ResourceList from './resource/components/ResourceList/ResourceList';
+
+import SignIn from './shared/components/SignIn/SignIn';
+import SignUp from './shared/components/SignUp/SignUp';
+import NavigationBar from "./shared/components/Navigation/NavigationBar";
+import Profile from "./shared/components/Profile/ProfileAvatar";
+import ProfilePage from "./shared/components/Profile/ProfileAvatar";
+import classes from "./App.css";
+
+axios.defaults.withCredentials = true;
+
+let myProp="<div>This is some html</div>";
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+      return (
+          <Router>
+              <Switch>
+                  <Router path="/sign-in">
+                      <SignIn isOpen={true}/>
+                  </Router>
+                  <Router path="/sign-up">
+                      <SignUp isOpen={true}/>
+                  </Router>
+                  <Router path="/home">
+                      <NavigationBar/>
+                  </Router>
+                  <Router path="/resource">
+                      <ResourceList isOpen={true}/>
+                  </Router>
+                  <Router path="/profile">
+                      <ProfilePage/>
+                  </Router>
+                  <Router path="/editor">
+                      <div>
+                          {ReactHtmlParser("<strong>abdullah</strong>")}
+                      </div>
+                      </Router>
+              </Switch>
+          </Router>
+      );
+    }
 }
 
 export default App;

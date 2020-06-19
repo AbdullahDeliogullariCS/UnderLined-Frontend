@@ -1,0 +1,31 @@
+.paper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form{
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.iconContainer{
+    direction: inherit;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
